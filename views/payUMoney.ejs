@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action='payUMoney' method='POST'>
+        <h3>payUMoney</h3>
+        <input type='hidden' name='key' value='{{mkey}}' />
+        <input type='hidden' name='txnid' value='{{txnid}}' />
+        <input type='hidden' name='surl' value='http://localhost:4030/payment_gateway/payUMoney' />
+        <input type='hidden' name='hash' id='hash' value='{{hash}}'>
+        <input type='text' name='firstname' placeholder='Enter name'><br><br>
+        <input type='email' name='email' placeholder='Enter email'><br><br>
+        <input class='amount' type='text' name='amount' placeholder='Enter amount' /><br><br>
+        <input class='con' type='text' name='phone' placeholder='Enter number' /><br><br>
+        <input type='hidden' name='service_provider' value='payu_paisa' /><br>
+        <input type='text' class='product' name='productinfo' value='educational purpose' />
+        <input type='submit' value='Pay' />
+    </form>
+</body>
+
+</html>
